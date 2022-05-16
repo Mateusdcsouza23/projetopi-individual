@@ -1,0 +1,100 @@
+*{
+  box-sizing: border-box;
+
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(../assets/imgs/fundo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex; 
+   
+}
+
+
+.header {
+  background-color: white;
+    
+}
+
+.header .container {
+  justify-content: space-between;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.agora {
+  font-weight: 800; 
+}
+
+.navbar {
+  width: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: black;
+}
+
+.logotimao{
+  height: 90px;
+
+}
+
+.titulo { 
+  color: black;
+  font-weight: 500; 
+  margin-right: 535px; 
+}
+
+.capa{
+
+  margin-top: 30px;
+  height: 50vh;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 20px;
+
+ }
+  
+.texto{  
+ 
+  color: black;
+  font-weight: 800;
+} 
+
+.texto2{
+background-color: white;
+margin-top: 54px;
+height: 401px;
+width: 700px;
+margin-left: 310px;
+border: 3px white solid;
+border-radius: 8px;
+ 
+
+}
+
+.filho2{
+   
+  display: flex;
+  margin-right: 50px;
+}
+#imgs {
+
+  width: 400px;
+  height: 400px;
+}
