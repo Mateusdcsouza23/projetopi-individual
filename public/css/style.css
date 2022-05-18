@@ -8,20 +8,27 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url(../assets/imgs/fundo3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
 }  
 
 .capa{
 
-  margin-top: 30px;
-  height: 50vh;
+  margin-top: 1px;
+  height: 100vh;
   display: flex;
   font-family: sans-serif;
   font-size: 20px;
   display: flex;
- } 
+  background-image: url(../assets/imgs/Design\ sem\ nome.png);
+  background-repeat: no-repeat; 
+
+}   
+
+.img2{
+  
+  background-repeat: no-repeat;
+  
+}
 
  .container {
   width: 80%;
@@ -74,8 +81,7 @@ color:  white;
   
   .texto_liberta{  
       
-    background-color: rgba(255, 255, 255, 0.911); 
-    background-image: url(../assets/imgs/fundo.webp);
+    background-color: rgba(255, 255, 255, 0.13); 
     background-position: center;
     background-repeat: no-repeat;  
     margin-top: 48px;
@@ -92,8 +98,8 @@ color:  white;
 
   
 .header {
-  background-color: white;
-    
+  background-color: white; 
+  
 }
 
 .header .container {
@@ -119,7 +125,7 @@ color:  white;
 }
 
 .logotimao{
-  height: 90px;
+  height: 90px; 
 
 }
 
@@ -131,10 +137,12 @@ color:  white;
   
 .titulo_texto{
    
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 4px;
-  color:black;
-  font-size: 28px; 
+  color: black;
+  font-size: 25px;
+  font-family: monospace; 
+  font-weight: 800; 
   
   
 
@@ -147,12 +155,12 @@ color:  white;
   color: white;
    border-top: 3px solid white;
    padding-left: 20px;
-   padding-top: 20px;
+   padding-top: 10px;
  }
  
 .veja{
   
-  margin-top: 5px;
+  margin-top: 2px;
   margin-left: 40px; 
   background-color: white;
   width: 8vw;
