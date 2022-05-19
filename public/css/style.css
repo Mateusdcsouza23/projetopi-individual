@@ -70,7 +70,7 @@ color:  white;
   100% {
       background-image: url(../assets/imgs/Corinthiasxvasco.jpg);
   }
-
+  
 }  
   
 .filho2{
@@ -141,7 +141,7 @@ color:  white;
   margin-left: 4px;
   color: black;
   font-size: 25px;
-  font-family: monospace; 
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
   font-weight: 800; 
   
   
@@ -158,7 +158,7 @@ color:  white;
    padding-top: 10px;
  }
  
-.veja{
+.button_veja{
   
   margin-top: 2px;
   margin-left: 40px; 
@@ -167,8 +167,20 @@ color:  white;
   height: 8vh;
   border: 3px solid white;
   border-radius: 5px;
-font-family: sans-serif;
-} 
+font-family: sans-serif; 
+color: black;
+}  
+
+.button_veja:hover{
+    
+  transition: 2s;
+  width: 8vw;
+  height: 8vh;
+  background-color: gray; 
+  color: gray; 
+  border: 3px solid gray;
+  border-radius: 8px;
+}
 
 .texto_veja{
 
@@ -194,17 +206,28 @@ font-family: sans-serif;
 }
 
 .container_footer {
-  margin-left: 10px;
-  text-align: center;
+  margin-left: 10px; 
+  display: flex;
 } 
 
 .logo_footer{
-   height: 12vh;
-   width: 4vw;
-
+   height: 14vh;
+   width: 6vw; 
+   margin-left: 500px;
 } 
 
 .texto_footer{
-padding-top: 1px;
 
+  margin: 0;
 }
+
+.texto_insta{ 
+
+  margin-top: 10px;
+
+} 
+
+.imagem{
+
+  margin-left: 10px;
+} 
