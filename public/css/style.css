@@ -175,5 +175,36 @@ font-family: sans-serif;
   color: black;
   font-family: sans-serif;
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 800; 
+  text-decoration: none;
+} 
+ 
+.simulador{
+   height: 90vh;
+  background-image: url(../assets/imgs/Design\ sem\ nome.png);
+   background-size: cover;
+
+}
+
+
+
+.footer{
+  
+  margin-top: 20px; 
+}
+
+.container_footer {
+  margin-left: 10px;
+  text-align: center;
+} 
+
+.logo_footer{
+   height: 12vh;
+   width: 4vw;
+
+} 
+
+.texto_footer{
+padding-top: 1px;
+
 }
