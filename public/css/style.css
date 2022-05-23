@@ -197,8 +197,66 @@ color: black;
    background-size: cover;
 
 }
+  
+
+/* Início página histótia */ 
+
+.container_historia{  
+
+  width: 80%;
+  display: flex; 
 
 
+}
+
+.titulo_historia{ 
+
+  color: white;
+  font-size: 28px; 
+  margin-left: 20px;
+
+}
+
+.texto_historia{
+ 
+margin-top: 70px;
+display: flex;
+  
+} 
+
+.historia{ 
+  height: 50vh; 
+  width: 56vh;
+  background-color: white;
+  margin-top: 50px;
+  margin-right: 30px;
+  text-align:center; 
+  padding-top: 20px;
+  border-radius: 8px; 
+  font-weight: 500; 
+  font-size: 18px; 
+  text-indent: 20px;
+}
+
+.titulo_fundacao{
+
+  color: black;
+  font-weight: 800;
+  margin-top: 10px;
+
+} 
+
+
+/*Início página login */ 
+
+.banner {
+   
+  height: 90vh;
+  background-image: url(../assets/imgs/Design\ sem\ nome.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+
+}
 
 .footer{
   
@@ -207,7 +265,8 @@ color: black;
 
 .container_footer {
   margin-left: 10px; 
-  display: flex;
+  display: flex; 
+  align-items: center;
 } 
 
 .logo_footer{
@@ -223,7 +282,8 @@ color: black;
 
 .texto_insta{ 
 
-  margin-top: 10px;
+  margin-top: 10px; 
+  font-size: 14px;
 
 } 
 
@@ -231,3 +291,9 @@ color: black;
 
   margin-left: 10px;
 } 
+
+.f2{
+margin-left: 450px;
+font-size: 14px;
+ margin-bottom: 2px;
+}
