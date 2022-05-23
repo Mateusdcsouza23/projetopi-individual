@@ -206,7 +206,6 @@ color: black;
   width: 80%;
   display: flex; 
 
-
 }
 
 .titulo_historia{ 
@@ -254,7 +253,7 @@ display: flex;
   height: 90vh;
   background-image: url(../assets/imgs/Design\ sem\ nome.png);
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size:cover; 
 
 }
 
@@ -296,4 +295,49 @@ display: flex;
 margin-left: 450px;
 font-size: 14px;
  margin-bottom: 2px;
+}  
+
+
+  .card {
+
+  height: 50vh;
+  width: 50vw;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 230px;
+  border-radius: 8px;
+  background-color:  #e5e5e5;
+
+  
 }
+.formulario{
+   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  color: palevioletred;
+  font-size: 25px;
+  font-family: sans-serif;
+  align-items: center;
+  border-radius: 8px
+} 
+
+input{
+
+  border: 2px solid black;
+  border-radius: 8px;
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 12px;
+
+} 
+
+.btn{
+
+margin-top: 10px;
+color: black;
+height: 8vh;
+width: 8vw;
+border: 3px solid  #e5e5e5;
+border-radius: 8px;
+}
+
