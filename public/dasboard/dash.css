@@ -1,0 +1,193 @@
+
+  
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   
+  }  
+
+.header {
+    background-color: white; 
+    
+  }
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex; 
+     
+  } 
+
+.capa{
+
+    margin-top: 1px;
+    height: 100vh;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 20px;
+    display: flex;
+    background-image: url(../assets/imgs/Design\ sem\ nome.png);
+    background-repeat: no-repeat; 
+    text-align: center;
+  
+  }    
+
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .header a {
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .navbar {
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: black;
+  } 
+
+  .logotimao{
+    height: 90px; 
+  
+  } 
+
+  .titulo { 
+    color: black;
+    font-weight: 500; 
+    margin-right: 535px; 
+  } 
+
+  .titulo_dash{
+     margin-top: 20px;
+     padding-top: 10px;
+   text-align: center;
+   background-color: white;
+   height: 80vh;
+   width: 20vw;
+   text-indent: 5px;  
+}   
+
+.texto_dash{
+ 
+    font-size: 20px;
+
+}
+
+.btn_voto{
+    height: 8vh;
+    width: 10vw;
+    margin-top: 50px;
+    background-color: gray;
+    border-radius: 5px;
+
+
+}
+.card_votos{
+
+    display: flex;
+
+}
+
+.votos{
+
+    display: flex;
+    flex-direction: column;
+
+    
+} 
+
+.img_voto {
+    margin-top: 6px;
+    margin-left: 50px;
+    height: 20vh;
+    width: 20vw; 
+
+}  
+
+.img_voto:hover{ 
+    height: 22vh;
+    width: 22vw;
+    transition: 1s;
+
+}
+
+.texto_voto{ 
+    color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 15px;
+    text-align: center;
+   text-indent: 52px;
+}
+
+input{
+    width: 10vw;
+    margin-top: 10px;
+    margin-left: 110px;
+}
+
+/* Início do footer */ 
+
+.footer{
+  
+    margin-top: 20px; 
+  }
+  
+  .container_footer {
+    margin-left: 10px; 
+    display: flex; 
+    align-items: center;
+  } 
+  
+  .logo_footer{
+     height: 14vh;
+     width: 6vw; 
+     margin-left: 500px;
+  } 
+  
+  .texto_footer{
+  
+    margin: 0;
+  }
+  
+  .texto_insta{ 
+  
+    margin-top: 10px; 
+    font-size: 14px;
+  
+  } 
+  
+  .imagem{
+  
+    margin-left: 10px;
+  } 
+  
+  .f2{
+  margin-left: 450px;
+  font-size: 14px;
+   margin-bottom: 2px;
+  }  
+  
+  .texto_insta{
+    
+    text-decoration: none;
+    color: black;
+  }
+  
+  .texto_insta:hover {
+   transition: 2s;
+   color: red;
+   font-weight: 800;
+  } 
+
+  /* Fim do footer */ 
+
+    

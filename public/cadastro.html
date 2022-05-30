@@ -22,7 +22,7 @@
 <body>
 
     <!--header inicio-->
-    <div class="header">
+    <div class="header"> 
         <div class="container"> 
             <div class="logotimao"><img class="logotimao" src="assets/imgs/logo-timao.jpg"></div>
             <h1 class="titulo">SCCP</h1>
@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./historia.html">Simulador</a>
+                    <a href="./historia.html">História</a>
                 </li>
                 <li>
                     <a href="./login.html">Login</a>
@@ -46,17 +46,12 @@
     </div>
     <!--header fim-->
 
-
-    <div class="banner ">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-        <div class="container tamanho-conteudo">
+    <div class="banner">
+        <div class="container tamanho-conteudo"> 
             <div class="card_medio">
-                <h2>Bem-vindo!</h2>
-                <div class="formulario_cadastro">
+                <div id="card_erro"></div>      
+             <h2>Bem-vindo!</h2>
+                <div class="formulario_cadastro">  
                     <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
@@ -76,14 +71,12 @@
 
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
                 </div>
-                </div>
+                </div> 
                 <div id="div_aguardar" class="loading-div">
                     <img src='' id="loading-gif">
                 </div>
+  
 
-                <div id="div_erros_login">
-
-                </div>
             </div>
         </div>
     </div>
@@ -97,10 +90,12 @@
         
         <div  class="f">
       <h3 class="texto_footer">Redes Sociais</h3>  
-            
-            <p class="texto_insta"><span>Instagram</span> @corinthians</p>
-            <p class="texto_insta"> <span>Twitter:</span> @corinthians</p>
-            <p class="texto_insta"> <span>Facebook:</span> @corinthians</p>
+      
+
+            <p><a class="texto_insta" href="https://www.instagram.com/corinthians/">
+                <span>Instagram:</span>@corinthians</a></p>
+            <p> <a class="texto_insta" href="https://twitter.com/Corinthians?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><span>Twitter:</span>@corinthians</a></p>
+            <p><a class="texto_insta" href="https://www.facebook.com/corinthians/"><span>Facebook:</span>@corinthians</a></p>
         
           
            
@@ -140,8 +135,8 @@
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            card_erro.style.display = "block"
+            card_erro.innerHTML = "Para prosseguir preencher todos os campos em branco!";
 
             finalizarAguardar();
             return false;

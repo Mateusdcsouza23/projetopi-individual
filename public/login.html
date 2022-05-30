@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./historia.html">Simulador</a>
+                    <a href="./historia.html">História</a>
                 </li>
                 <li class="agora">
                     <a href="./login.html">Login</a>
@@ -46,12 +46,7 @@
 
 
     <div class="banner">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
-        </div>
-
+        <div id="card_erro"></div>   
         <div class="container">
             <div class="card">
                 <h2>Bem-vindo!</h2>
@@ -90,10 +85,12 @@
         
         <div  class="f">
       <h3 class="texto_footer">Redes Sociais</h3>  
-            
-            <p class="texto_insta"><span>Instagram</span> @corinthians</p>
-            <p class="texto_insta"> <span>Twitter:</span> @corinthians</p>
-            <p class="texto_insta"> <span>Facebook:</span> @corinthians</p>
+      
+
+            <p><a class="texto_insta" href="https://www.instagram.com/corinthians/">
+                <span>Instagram:</span>@corinthians</a></p>
+            <p> <a class="texto_insta" href="https://twitter.com/Corinthians?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><span>Twitter:</span>@corinthians</a></p>
+            <p><a class="texto_insta" href="https://www.facebook.com/corinthians/"><span>Facebook:</span>@corinthians</a></p>
         
           
            
@@ -130,8 +127,8 @@
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            card_erro.style.display = "block"
+            card_erro.innerHTML = "Para prosseguir preencher todos os campos!";
             finalizarAguardar();
             return false;
         }
