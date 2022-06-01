@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   
+  }  
+  
+
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex; 
+     
+  }
+
+  .titulo { 
+    color: black;
+    font-weight: 500; 
+    margin-right: 535px; 
+  }
+  
+.header {
+    background-color: white; 
+    
+  }
+  
+  .header .container {
+    justify-content: space-between;
+  }
+  
+  .header a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .agora {
+    font-weight: 800; 
+  }
+  
+  .navbar {
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    color: black;
+  }
+  
+  .logotimao{
+    height: 90px; 
+  
+  }
+
+.banner {
+   
+    height: 90vh;
+    background-image: url(../assets/imgs/Design\ sem\ nome.png);
+    background-repeat: no-repeat;
+    background-size:cover; 
+  }
+
+  .graf1{
+     width: 30vw;
+     background-color: blue;
+
+  }

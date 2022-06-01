@@ -6,12 +6,16 @@
 CREATE DATABASE acquatec;
 
 USE acquatec;
+create database sccp;
+use sccp;
 
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha VARCHAR(50),
+	fkVoto int,
+    foreign key (fkVoto) references votos (id)
 ); 
 
 
@@ -29,6 +33,26 @@ insert into votos values
 ('6', 'CORINTHIANS 1X1 SANTOS'),
 ('7', 'BOCA JUNIROS 1X1 CORINTHIANS'),
 ('8', 'CORINTHIANS 1X1 BOCA JUNIORS');
+
+insert into usuario values 
+(null, 'Mateus', 'mateus@sp.com', '1235',1),
+(null, 'Lucas', 'lucas@sp.com', '1235',1),
+(null, 'Rodrigo', 'rodrigo@sp.com', '1235',2),
+(null, 'Marcos', 'marcos@sp.com', '123456789',2),
+(null, 'Pedro', 'pedrin@sp.com', '12345678',3),
+(null, 'Luigi', 'luigi@sp.com', '1234567',4),
+(null, 'Edu', 'edu@sp.com', '123456',5),
+(null, 'Larissa', 'larissa@sp.com', '12345',6),
+(null, 'Joaquim', 'joca@sp.com', '1234',7),
+(null, 'Wilker', 'wilker@sp.com', '121212',8),
+(null, 'Marlom', 'marlom@sp.com', '121212',8),
+(null, 'Petri', 'petri@sp.com', '121212',8);
+
+select * from usuario, votos where fkVoto = votos.id; 
+select * from usuario;
+
+
+select votos.voto, count(usuario.id) from usuario join votos on usuario.fkVoto = votos.id group by votos.voto; 
 
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,

@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idAquario, limite_linhas) {
+function buscarUltimasMedidas(fkVoto, limite_linhas) {
     
     instrucaoSql = ''
     
@@ -13,16 +13,14 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
                     from medida
                     where fk_aquario = ${idAquario}
                     order by id desc`;
+
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-                        temperatura, 
-                        umidade, 
-                        momento,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from medida
-                    where fk_aquario = ${idAquario}
-                    order by id desc limit ${limite_linhas}`;
-    } else {
+        instrucaoSql = `select votos.voto, count(usuario.id) from usuario join votos on usuario.fkVoto = votos.id group by votos.voto;`;
+
+    } /* else  if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select votos.voto, count(usuario.id) from usuario join votos on usuario.fkVoto = votos.id group by votos.voto;` */
+     else { 
+
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
     }
@@ -31,7 +29,7 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idAquario) {
+function buscarMedidasEmTempoReal(fkVoto) {
     
     instrucaoSql = ''
     
@@ -44,13 +42,11 @@ function buscarMedidasEmTempoReal(idAquario) {
                     order by id desc`;
         
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-                        temperatura, 
-                        umidade, DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_aquario 
-                        from medida where fk_aquario = ${idAquario} 
-                    order by id desc limit 1`;
-    } else {
+        instrucaoSql = `select votos.voto, count(usuario.id) from usuario join votos on usuario.fkVoto = votos.id group by votos.voto;`;
+
+    } /* else  if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
+        instrucaoSql = `select votos (voto), count(usuario.id) from usuario join votos on usuario.fkVoto = votos.id group by votos.voto;` */
+     else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
     }
