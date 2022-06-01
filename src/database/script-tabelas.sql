@@ -12,7 +12,23 @@ CREATE TABLE usuario (
 	nome VARCHAR(50),
 	email VARCHAR(50),
 	senha VARCHAR(50)
+); 
+
+
+create table votos (
+id int primary key,
+voto varchar (50)
 );
+
+insert into votos values 
+('1', 'EMELEC 0X0 CORINTHIANS'),
+('2', 'CORINTHIANS 3X0 EMELEC'),
+('3', 'VASCO 0X0 CORINTHIANS'),
+('4', 'CORINTHIANS 1X0 VASCO'),
+('5', 'SANTOS 0X1 CORINTHIANS'),
+('6', 'CORINTHIANS 1X1 SANTOS'),
+('7', 'BOCA JUNIROS 1X1 CORINTHIANS'),
+('8', 'CORINTHIANS 1X1 BOCA JUNIORS');
 
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
