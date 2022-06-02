@@ -51,48 +51,69 @@
 
        
         <div class="titulo_dash"> 
-               
-            <h2 class="texto_dash"> Vote no jogo que mais gostou do timão!</h2> 
+                 
+            <h2 class="texto_dash">Qual foi o placar dos jogos ao lado direito?</h2> 
 
- 
          
-            <button  class="btn_voto" onclick="votacao()">Confirmar</button>
+              <select name="" id="i_quiz">
+                  <option value="">Selecione um placar!</option>
+                  <option value="1">0x0</option>
+                  <option value="2">3x0</option>
+                  <option value="3">0x0</option>
+                  <option value="4">1x0</option>
+                  <option value="5">0x1</option>
+                  <option value="6">1x1</option>
+                  <option value="7">1x1</option>
+                  <option value="8">2x0</option>
+              </select>
+ 
+               <button  class="btn_voto" onclick="votacao()">Confirmar</button>  
+
+               <button class="btn_voto" onclick="registro()">Ver resultados</button>
+                
+              <div class="texto_aviso"><p>Atenção, considere por na ordem que se encontra os jogos na tela
+              </p></div>
+              
         </div>
          <div class="card_votos">
             <div class="card_votos">
 
                 <div class="votos">
-                    <span class="texto_voto">EMELEC 0X0 CORINTHIANS</span>
+                    <span class="texto_ida_volta">JOGO IDA</span>
+                    <span class="texto_voto">1° EMELEC X CORINTHIANS</span>
                     <img class="img_voto" src="../assets/imgs/0x0_emelec.jpg" alt="">
-                    <input type="checkbox" class="input_voto" id="cor_jogo1">
+                   <!-- <input  class="input_voto" id="cor_jogo1"> -->
     
     
-    
-                    <span class="texto_voto">CORINTHIANS 3X0 EMELEC</span>
+                    <span class="texto_ida_volta">JOGO DE VOLTA</span>
+                    <span class="texto_voto">2° CORINTHIANS X EMELEC</span>
                     <img class="img_voto" src="../assets/imgs/3x0_emelec.jpg" alt="">
-                    <input type="checkbox"  class="input_voto" id="cor_jogo2">
+                    <!-- <input type="checkbox"  class="input_voto" id="cor_jogo2"> -->
     
-    
-                    <span class="texto_voto">VASCO 0X0 CORINTHIANS</span>
+                    <span class="texto_ida_volta">JOGO DE IDA</span>
+                    <span class="texto_voto">3° VASCO X CORINTHIANS</span>
                     <img class="img_voto" src="../assets/imgs/0x0_vasco.jpg" alt="">
-                    <input type="checkbox" class="input_voto" id="cor_jogo3">
+                    <!-- <input type="checkbox" class="input_voto" id="cor_jogo3"> -->
     
     
                 </div>
     
     
                 <div class="votos">
-                    <span class="texto_voto">CORINTHIANS 1X0 VASCO</span>
+                    <span class="texto_ida_volta">JOGO DE VOLTA</span>
+                    <span class="texto_voto">4° CORINTHIANS X VASCO</span>
                     <img class="img_voto" src="../assets/imgs/gol_paulinho.jpg" alt="">
-                    <input type="checkbox" class="input_voto" id="cor_jogo4">
-    
-                    <span class="texto_voto">SANTOS 0X1 CORINTHIANS</span>
+                   <!-- <input type="checkbox" class="input_voto" id="cor_jogo4"> -->
+                   
+                    <span class="texto_ida_volta">JOGO DE IDA</span>
+                    <span class="texto_voto">5° SANTOS X CORINTHIANS</span>
                     <img class="img_voto" src="../assets/imgs/1x0_santos.jpg" alt="">
-                    <input type="checkbox" class="input_voto" id="cor_jogo5">
-    
-                    <span class="texto_voto">CORINTHIANS 1X1 SANTOS</span>
+                   <!-- <input type="checkbox" class="input_voto" id="cor_jogo5"> -->
+                   
+                    <span class="texto_ida_volta">JOGO DE VOLTA</span>
+                    <span class="texto_voto">6° CORINTHIANS X SANTOS</span>
                     <img class="img_voto" src="../assets/imgs/1x1_santos original.webp" alt="">
-                    <input type="checkbox" class="input_voto" id="cor_jogo1 6">
+                   <!-- <input type="checkbox" class="input_voto" id="cor_jogo1 6"> -->
     
     
                 </div>
@@ -101,19 +122,21 @@
     
     
                 <div class="votos">
-                    <span class="texto_voto">BOCA JUNIORS 1X1 CORINTHIANS </span>
+                    <span class="texto_ida_volta">JOGO DE IDA</span>
+                    <span class="texto_voto">7° BOCA JUNIORS X CORINTHIANS</span>
                     <img class="img_voto" src="../assets/imgs/gol_romarinho.jpg" alt="">
-                    <input type="checkbox" class="input_voto" id="cor_jogo7">
-    
-                    <span class="texto_voto">CORINTHIANS 2X0 BOCA JUNIORS</span>
+                    <!-- <input type="checkbox" class="input_voto" id="cor_jogo7"> -->
+                    
+                    <span class="texto_ida_volta">JOGO DE VOLTA</span>
+                    <span class="texto_voto">8° CORINTHIANS X BOCA JUNIORS</span>
                     <img class="img_voto" src="../assets/imgs/trofeu.jpg"
                         alt="">
-                    <input type="checkbox" class="input_voto" id="cor_jogo8">
+                   <!-- <input type="checkbox" class="input_voto" id="cor_jogo8"> -->
     
         <!--
                     <span class="texto_voto">VASCO DA GAMA 0X0 CORINTHIANS</span>
                     <img class="img_voto" src="../assets/imgs/0x0_vasco.jpg" alt="">
-                    <input type="checkbox" class="input_voto">
+                   <!-- <input type="checkbox" class="input_voto">  -->
     
                 </div>
             -->
@@ -123,8 +146,43 @@
 
     
 
-    <!-- Footer início --> 
 
 </body>     
-</html>
+</html> 
 
+<script>  
+
+var placar = [] 
+function votacao(){
+
+  placar.push(i_quiz.value)
+
+var quantidade = placar.length
+
+var select = (i_quiz.value)
+
+if (quantidade > 9) {
+
+    alert (`Você ja digitou o placar dos 8 jogos`)
+    return
+}  
+}
+
+/*function registro(){
+    
+    var select = (i_quiz.value)
+
+if (select == 1 && select == 2 && select == 3 && select == 4 && select == 5 && select == 6 &&
+select == 7 && select == 8) {
+
+    alert("Acertou miseravel")
+
+
+}
+
+}*/
+
+
+</script>
+
+ 

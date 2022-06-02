@@ -65,27 +65,38 @@ body {
     margin-right: 535px; 
   } 
 
-  .titulo_dash{
-     margin-top: 20px;
-     padding-top: 10px;
-   text-align: center;
-   background-color: white;
-   height: 80vh;
-   width: 20vw;
-   text-indent: 5px;  
-}   
+    .titulo_dash{
+      margin-top: 20px;
+      padding-top: 10px;
+    text-align: center;
+    background-color: white;
+    height: 65vh;
+    width: 17vw;
+    text-indent: 5px;  
+  }   
 
 .texto_dash{
  
     font-size: 20px;
+    margin-top: 30px;
 
+} 
+
+.input_quis{
+  height: 2vh;
+  width: 23vh;
+  border: 2px black solid;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 20px;
 }
 
 .btn_voto{
     height: 8vh;
     width: 10vw;
-    margin-top: 50px;
+    margin-top: 25px;
     background-color: gray;
+   border: 3px solid gray;
     border-radius: 5px;
 
 
@@ -126,6 +137,16 @@ body {
     font-size: 15px;
     text-align: center;
    text-indent: 52px;
+} 
+
+.texto_ida_volta{
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 15px;
+  text-align: center;
+ text-indent: 52px;
+
 }
 
 input{

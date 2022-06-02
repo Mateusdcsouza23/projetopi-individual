@@ -22,6 +22,11 @@ body {
   background-repeat: no-repeat; 
 
 }   
+.sessao2{
+   width: 100%;
+  background-color: black;
+
+}
 
 .img2{
   
@@ -192,9 +197,16 @@ color: black;
   font-size: 15px;
   font-weight: 800; 
   text-decoration: none;
-}  
+}    
 
+/* Início sessaão 2 pag/home */
 
+.section2{
+    
+
+  height: 80vh;
+  background-size: cover;
+}
   
 
 /* Início página histótia */ 
