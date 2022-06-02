@@ -2,10 +2,11 @@
     box-sizing: border-box;
   
   }
-  
+   
   body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     font-family: 'Barlow', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
    
   }  
@@ -15,7 +16,6 @@
     width: 80%;
     margin: auto;
     display: flex; 
-     
   }
 
   .titulo { 
@@ -57,16 +57,47 @@
   }
 
 .banner {
-   
-    height: 90vh;
+   display: flex;
+    height: 85.6vh;
     background-image: url(../assets/imgs/Design\ sem\ nome.png);
     background-repeat: no-repeat;
     background-size:cover; 
+  } 
+ 
+  .border{
+    
+    /* border-left: 2px solid black; */
+
+  }
+
+  .card_mural{
+        
+    border-right: 3px solid white;
+
+  }
+
+  .mural{
+    
+    width: 50vh;
+    height: 85.6vh;
+    background-color: #ffffff42;
   }
 
   .graf1{
-    position: relative;
-    height:40vh;
-    width:80vw;
-
+    height:60vh;
+    width:50vw;
+  }  
+  
+  .grafico{
+    
+    width: 60vw;
   }
+
+#dht11Umidade{
+  margin-top: 100px;
+  margin-left: 150px; 
+  border-radius: 5px;
+  background-color: white;
+  width: 80vw;
+  height: 85vh;  
+}

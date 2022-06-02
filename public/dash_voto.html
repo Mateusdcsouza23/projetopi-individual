@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,20 +36,21 @@
       
 
 
-    <div class="banner">
-       
+    <div class="banner">              
+
+     <div class="card_mural">
+         <div class="mural "></div>
+     </div> 
         
-                       
+    <div class="graf1">
 
-        <div class="graf1">
-
-            <div>
-                    <canvas id="dht11Umidade"></canvas>
+            <div class="grafico">
+                   
+                <canvas id="dht11Umidade"></canvas>
 
             </div>
 
         </div>
-    
 
     </div>
 
@@ -98,7 +99,7 @@ window.onload = obterDadosGrafico(1);
                 {
                     yAxisID: 'y-umidade',
                     label: 'Umidade',
-                    borderColor: '#32B9CD',
+                    borderColor: 'Black',
                     backgroundColor: ['#32b9cd8f', 'red', 'gray', 'black', 'blue', 'aqua', 'gray', 'yellow',] ,
                     fill: true,
                     data: []
