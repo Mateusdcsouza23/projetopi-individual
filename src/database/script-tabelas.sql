@@ -3,9 +3,7 @@
 -- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
 
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
-
-USE acquatec;
+;
 create database sccp;
 use sccp;
 

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCCP - DASHBOARD</title> 
     <link rel="stylesheet" href="./css/dash_voto.css"> 
-    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
@@ -100,7 +99,7 @@ window.onload = obterDadosGrafico(1);
                     yAxisID: 'y-umidade',
                     label: 'Umidade',
                     borderColor: '#32B9CD',
-                    backgroundColor: '#32b9cd8f',
+                    backgroundColor: ['#32b9cd8f', 'red', 'gray', 'black', 'blue', 'aqua', 'gray', 'yellow',] ,
                     fill: true,
                     data: []
                 },
@@ -117,8 +116,8 @@ window.onload = obterDadosGrafico(1);
 
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
-            dados.labels.push(registro.nome);
-            dados.datasets[0].data.push(registro.fkVoto);
+            dados.labels.push(registro.voto);
+            dados.datasets[0].data.push(registro.qtd_pessoas);
            // dados.datasets[1].data.push(registro.dht11_temperatura);
         }
 
@@ -128,7 +127,7 @@ window.onload = obterDadosGrafico(1);
 
         var ctx = dht11Umidade.getContext('2d')
         console.log('passei aqui');
-        window.grafico_linha = Chart.Line(ctx, {
+        window.grafico_linha = Chart.Bar(ctx, {
 
             data: dados,
 
@@ -142,17 +141,7 @@ window.onload = obterDadosGrafico(1);
                     text: 'Dados capturados'
                 },
                 scales: {
-                    yAxes: [{
-                        type: 'linear',
-                        display: true,
-                        position: 'left',
-                        id: 'y-temperatura',
-                        ticks: {
-                            beginAtZero: true,
-                            max: 100,
-                            min: 0
-                        }
-                    }, {
+                    yAxes: [ {
                         type: 'linear',
                         display: false,
                         position: 'right',
@@ -180,44 +169,44 @@ window.onload = obterDadosGrafico(1);
 
     //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
     //     Para ajustar o "select", ajuste o comando sql em src/models
-    function atualizarGrafico(fkVoto, dados) {
+    // function atualizarGrafico(fkVoto, dados) {
 
-        fetch(`/medidas/tempo-real/${fkVoto}`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (novoRegistro) {
+    //     fetch(`/medidas/tempo-real/${fkVoto}`, { cache: 'no-store' }).then(function (response) {
+    //         if (response.ok) {
+    //             response.json().then(function (novoRegistro) {
 
-                    console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-                    console.log(`Dados atuais do gráfico: ${dados}`);
+    //                 console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+    //                 console.log(`Dados atuais do gráfico: ${dados}`);
 
-                    // tirando e colocando valores no gráfico
-                   //dados.labels.shift(); // apagar o primeiro
-                   //dados.labels.push(novoRegistro[0].nome); // incluir um novo momento
+    //                 // tirando e colocando valores no gráfico
+    //                //dados.labels.shift(); // apagar o primeiro
+    //                //dados.labels.push(novoRegistro[0].nome); // incluir um novo momento
                      
                    
-                    console.log('passei aq')
-                    dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                    dados.datasets[0].data.push(novoRegistro[0].fkVoto);
-                    console.log('passei aq nov'); // incluir uma nova medida de umidade
+    //                 console.log('passei aq')
+    //                 dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+    //                 dados.datasets[0].data.push(novoRegistro[0].qtd_pessoas);
+    //                 console.log('passei aq nov'); // incluir uma nova medida de umidade
 
-                /*    dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-                    dados.datasets[1].data.push(novoRegistro[0].dht11_temperatura); // incluir uma nova medida de temperatura */
+    //             /*    dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
+    //                 dados.datasets[1].data.push(novoRegistro[0].dht11_temperatura); // incluir uma nova medida de temperatura */
 
-                    window.grafico_linha.update();
+    //                 window.grafico_linha.update();
 
-                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                    proximaAtualizacao = setTimeout(() => atualizarGrafico(fkVoto, dados), 2000);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-                // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(fkVoto, dados), 2000);
-            }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
+    //                 // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+    //                 proximaAtualizacao = setTimeout(() => atualizarGrafico(fkVoto, dados), 2000);
+    //             });
+    //         } else {
+    //             console.error('Nenhum dado encontrado ou erro na API');
+    //             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+    //             proximaAtualizacao = setTimeout(() => atualizarGrafico(fkVoto, dados), 2000);
+    //         }
+    //     })
+    //         .catch(function (error) {
+    //             console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+    //         });
 
-    }
+    // }
 
 
 
