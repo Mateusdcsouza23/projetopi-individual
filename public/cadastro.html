@@ -36,6 +36,9 @@
                     <a href="./historia.html">História</a>
                 </li>
                 <li>
+                    <a href="./dashboard.html">Quiz</a>
+                </li>
+                <li>
                     <a href="./login.html">Login</a>
                 </li>
                 <li class="agora">
@@ -47,11 +50,10 @@
     <!--header fim-->
 
     <div class="banner">
-        <div class="container tamanho-conteudo"> 
-            <div class="card_medio">
-                <div id="card_erro"></div>      
-             <h2>Bem-vindo!</h2>
-                <div class="formulario_cadastro">  
+        <div class="container_cadastro"> 
+            <div class="card_medio"> 
+             <h2>Bem-vindo!</h2>           
+                  <div class="formulario_cadastro">  
                     <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
@@ -65,21 +67,22 @@
 
                     <span class="tipo_campo">Senha:</span>
                     <input id="senha_input" type="password" placeholder="******">
-
-                    <span class="tipo_campo">Confirmação da Senha:</span>
-                    <input id="confirmacao_senha_input" type="password" placeholder="******">
                      
-                     <select name="" id="votacao_select">
-                         <option value="">SELECIONE UM JOGO!</option>
-                         <option value="1">EMELEC 0X0 CORINTHIANS</option>
-                         <option value="2"> CORINTHIANS 3X0 EMELEC</option>
-                         <option value="3">VASCO 0X0 CORINTHIANS</option>
-                         <option value="4">CORINTHIANS 1X0 VASCO</option>
-                         <option value="5">SANTOS 0X1 CORINTHIANS</option>
-                         <option value="6">CORINTHIANS 1X1 SANTOS</option>
-                         <option value="7">BOCA JUNIORS 1X1 CORINTHIANS</option>
-                         <option value="8">CORINTHIANS 2X0 BOCA JUNIORS</option>
-                     </select>
+                    <span class="tipo_campo">Vote no seu jogo favorito</span>
+                    <select name="" id="votacao_select">
+                        <option value="">SELECIONE UM JOGO!</option>
+                        <option value="1">EMELEC 0X0 CORINTHIANS</option>
+                        <option value="2"> CORINTHIANS 3X0 EMELEC</option>
+                        <option value="3">VASCO 0X0 CORINTHIANS</option>
+                        <option value="4">CORINTHIANS 1X0 VASCO</option>
+                        <option value="5">SANTOS 0X1 CORINTHIANS</option>
+                        <option value="6">CORINTHIANS 1X1 SANTOS</option>
+                        <option value="7">BOCA JUNIORS 1X1 CORINTHIANS</option>
+                        <option value="8">CORINTHIANS 2X0 BOCA JUNIORS</option>
+                    </select>
+                    <!-- <span class="tipo_campo">Confirmação da Senha:</span>
+                    <input id="confirmacao_senha_input" type="password" placeholder="******"> -->
+                     
 
 
                     <button class="btn" onclick="cadastrar()">Cadastrar</button>
@@ -88,7 +91,8 @@
                 <div id="div_aguardar" class="loading-div">
                     <img src='' id="loading-gif">
                 </div>
-  
+                <div id="card_erro"></div> 
+
 
             </div>
         </div>
@@ -145,10 +149,10 @@
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        // var confirmacaoSenhaVar = confirmacao_senha_input.value;
         var selectVar = votacao_select.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" || selectVar == "" ) {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || selectVar == "" ) {
             card_erro.style.display = "block"
             card_erro.innerHTML = "Para prosseguir preencher todos os campos em branco!";
 

@@ -34,6 +34,9 @@
                 <li>
                     <a href="./historia.html">História</a>
                 </li>
+                <li>
+                    <a href="./dashboard.html">Quiz</a>
+                </li>
                 <li class="agora">
                     <a href="./login.html">Login</a>
                 </li>
@@ -45,10 +48,10 @@
     </div>
 
 
-    <div class="banner">
-        <div id="card_erro"></div>   
-        <div class="container">
+    <div class="banner">  
+        <div class="container_login">
             <div class="card">
+                 
                 <h2>Bem-vindo!</h2>
                 <div class="formulario">
 
@@ -63,17 +66,10 @@
 
 
                 </div>   
-
-
-
-                <div id="div_aguardar" class="loading-div">
-                   
-                </div>
-
-                <div id="div_erros_login">
-
-                </div>
-            </div>
+                
+                <div id="div_resultado"></div>
+            </div>  
+            <div id="erro_login"></div>
         </div>
     </div>
 
@@ -121,15 +117,15 @@
 
 
     function entrar() {
-        aguardar();
+        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            card_erro.style.display = "block"
-            card_erro.innerHTML = "Para prosseguir preencher todos os campos!";
-            finalizarAguardar();
+            erro_login.style.display = "block"
+            erro_login.innerHTML = "Para prosseguir preencher todos os campos!";
+            // finalizarAguardar();
             return false;
         }
         else {
@@ -186,7 +182,7 @@
     }
 
     function sumirMensagem() {
-        cardErro.style.display = "none"
+        card_erro_login.style.display = "none"
     }
 
 </script>

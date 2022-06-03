@@ -58,7 +58,7 @@
 
 .banner {
    display: flex;
-    height: 85.6vh;
+    height: 86.3vh;
     background-image: url(../assets/imgs/Design\ sem\ nome.png);
     background-repeat: no-repeat;
     background-size:cover; 
@@ -71,16 +71,25 @@
   }
 
   .card_mural{
-        
-    border-right: 3px solid white;
+        display: flex;
+    border-right: 3px solid white; 
+    flex-direction: column;
 
   }
 
   .mural{
-    
     width: 50vh;
-    height: 85.6vh;
+    height: 86.3vh;
     background-color: #ffffff42;
+  } 
+  .texto_ranking{
+     text-align: center;
+    color:  black;
+    font-size: 20px;
+    font-weight: 800;
+
+
+
   }
 
   .graf1{
@@ -98,6 +107,8 @@
   margin-left: 150px; 
   border-radius: 5px;
   background-color: white;
-  width: 80vw;
-  height: 85vh;  
-}
+  width: 50vw;
+  height: 50vh;  
+}  
+
+

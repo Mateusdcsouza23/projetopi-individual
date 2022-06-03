@@ -39,7 +39,9 @@
     <div class="banner">              
 
      <div class="card_mural">
-         <div class="mural "></div>
+         <div class="mural ">
+             <h3 class="texto_ranking">Confira o ranking de votos</h3>
+         </div>
      </div> 
         
     <div class="graf1">
@@ -98,9 +100,9 @@ window.onload = obterDadosGrafico(1);
             datasets: [
                 {
                     yAxisID: 'y-umidade',
-                    label: 'Umidade',
+                    label: 'Votos',
                     borderColor: 'Black',
-                    backgroundColor: ['#32b9cd8f', 'red', 'gray', 'black', 'blue', 'aqua', 'gray', 'yellow',] ,
+                    backgroundColor: ['orange', 'aqua', 'blue', 'orangered', 'saddlebrown', 'gray', 'midnightblue', 'yellow'] ,
                     fill: true,
                     data: []
                 },
@@ -161,7 +163,7 @@ window.onload = obterDadosGrafico(1);
             }
         });
 
-        setTimeout(() => atualizarGrafico(fkVoto, dados), 2000);
+        // setTimeout(() => atualizarGrafico(fkVoto, dados), 2000);
     }
 
 
