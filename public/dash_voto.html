@@ -14,7 +14,7 @@
     <div class="header"> 
         <div class="container"> 
             <div class="logotimao"><img class="logotimao" src="assets/imgs/logo-timao.jpg"></div>
-            <h1 class="titulo">SCCP</h1>
+            <h1 class="titulo">SCCP</h1>  
             <ul class="navbar">
                 <li>
                     <a href="./index.html">
@@ -40,12 +40,15 @@
 
      <div class="card_mural">
          <div class="mural ">
-             <h3 class="texto_ranking">Confira o ranking de votos</h3>
-         </div>
+             <h3 class="texto_ranking">Sport Clube Corinthians Paulista</h3>
+             <p class="texto_user">Olá, <span id="usuario">usuário</span></p>
+             <!-- <p class="texto_confira">Confira os jogos mais votados!</p> -->
+             <button class="btn_dash"> <a class="texto_btn" href="./login.html">Sair</a></button>
+            </div>  
      </div> 
         
     <div class="graf1">
-
+        <p class="texto_confira">Confira os jogos mais votados!</p>
             <div class="grafico">
                    
                 <canvas id="dht11Umidade"></canvas>
@@ -64,6 +67,8 @@
    let proximaAtualizacao;
 
 window.onload = obterDadosGrafico(1);
+
+usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function obterDadosGrafico(id) {
        /* alterarTitulo(id)*/

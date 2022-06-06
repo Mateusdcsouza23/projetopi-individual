@@ -290,12 +290,12 @@ margin-left: 85px;
 /* Início pagina dash_estatica */
 
 .titulo_dash{
-  margin-top: 20px;
   padding-top: 10px;
 text-align: center;
-background-color: white;
-height: 65vh;
-width: 17vw;
+background-color: #212124;
+border-right: 3px white solid;
+height: 86vh;
+width: 22vw;
 text-indent: 5px;  
 }   
 
@@ -584,7 +584,8 @@ margin-right: 10px;
   border-radius: 8px;
   margin-left: 15px;
   width: 20vw;
-  height: 8vh;
+  height: 13vh;
+  padding-top: 10px;
   display: none;
 
 }

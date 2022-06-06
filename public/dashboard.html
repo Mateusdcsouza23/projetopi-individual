@@ -55,26 +55,20 @@
        
         <div class="titulo_dash"> 
                  
-            <h2 class="texto_dash">Qual foi o placar dos jogos ao lado direito?</h2> 
-
+            <h2 class="texto_dash">O quão corinthiano você foi em 2012?</h2> 
+  
          
-              <select name="" id="i_quiz">
-                  <option value="">Selecione um placar!</option>
-                  <option value="1">0x0</option>
-                  <option value="2">3x0</option>
-                  <option value="3">0x0</option>
-                  <option value="4">1x0</option>
-                  <option value="5">0x1</option>
-                  <option value="6">1x1</option>
-                  <option value="7">1x1</option>
-                  <option value="8">2x0</option>
-              </select>
- 
-               <button  class="btn_voto" onclick="votacao()">Confirmar</button>  
+            <!-- <div id="Questoes">  
+                           
+                <h4>Quem fez dois gols no final?</h4>
+                <input type="radio" id="i_emerson"> Emerson Sheik?
+            </div> -->
+
+               <!-- <button  class="btn_voto" onclick="votacao()">Confirmar</button>   -->
 
                <button class="btn_voto" onclick="registro()">Ver resultados</button>
                 
-              <div class="texto_aviso"><p>Atenção, considere por na ordem que se encontra os jogos na tela
+              <div id="div_resultado" class="texto_aviso"><p>Atenção, considere por na ordem que se encontra os jogos na tela
               </p></div>
               
         </div>
@@ -155,47 +149,6 @@
 
 <script>  
 
-var placar = [] 
-function votacao(){
-
-  placar.push(i_quiz.value)
-
-var quantidade = placar.length
-
-var select = (i_quiz.value)
-
-if (quantidade > 9) {
-
-    alert (`Você ja digitou o placar dos 8 jogos`)
-    return
-}  
-}
-
-function registro(){
-    
-    var select = (i_quiz.value)
-
-if(select == "") {
-
-alert('coloque um valor por favor')
-
-return
-
-}
-
-if (select == 1) {
-
-   alert (`Acertou`)
-
-
-} else {
-  
-    alert ("errou")
-
-}
-
-
-}
 
 
 
