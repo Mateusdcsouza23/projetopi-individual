@@ -160,7 +160,7 @@ color:white;
  .texto2_liberta{ 
    width: 800;
   margin-top: 30px;
-  font-size: 22px;
+  font-size: 21px;
   color: gray;
    border-top: 3px solid gray;
    padding-left: 20px;
@@ -505,7 +505,64 @@ display: none;
   color: black;
   font-weight: 800;
 
+}  
+
+
+/* Início pagina hinos */ 
+.hinos{
+   
+  display: flex;
+ 
+
+} 
+
+
+.texto_hino1{
+ color: white;
+ font-size: 21px;
+ font-weight: 800;
+  text-align: center;
+
 }
+
+.img_bando_loucos{
+ 
+  margin-top: 20px;
+  margin-left: 50px;
+
+}
+
+.btn_ouvir{
+  margin-top: 10px;
+  margin-left: 130px;
+ 
+}
+
+.btn_hino1{ 
+  width: 8vw;
+  height: 8vh;
+ text-align: center;
+ font-size: 15px;
+ border: 2px white solid;
+ border-radius: 3px;
+ box-shadow: 2px 2px;
+}
+
+.bando_loucos{
+   
+  width: 28vw;
+  height: 48vh;
+
+} 
+
+
+.bando_loucos:hover{
+ 
+  width: 29vw;
+  height: 48vh;
+  transition: 1s;
+}
+
 
 
 /* Início do footer */
