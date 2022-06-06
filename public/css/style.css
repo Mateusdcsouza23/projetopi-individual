@@ -561,7 +561,13 @@ display: none;
   width: 29vw;
   height: 48vh;
   transition: 1s;
-}
+}  
+
+.hino_href{
+  
+  margin-left: 150px;
+
+} 
 
 
 

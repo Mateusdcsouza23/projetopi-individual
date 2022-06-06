@@ -56,8 +56,27 @@
         <div class="titulo_dash"> 
                  
             <h2 class="texto_dash">O quão corinthiano você foi em 2012?</h2> 
-  
-         
+                           
+        <select id="i_select">
+            <option value="">Quantos jogos você assistiu em 2012</option>
+            <option value="1">Todos</option>
+            <option value="2">Apenas as quartas</option>
+            <option value="3">Apenas as semifinais e as finais</option>
+            <option value="4">Apenas a final</option>
+        
+            
+        </select>
+          
+        <select id="i_final"> Onde foi decido o jogo da final?
+              
+            <option value="">Onde foi decido a final da libertadores?</option>
+            <option value="1">Pacaembu?</option>
+            <option value="2">Neo Quimica Arena</option>
+            <option value="3">La bombonera</option>
+
+        </select>
+        
+
             <!-- <div id="Questoes">  
                            
                 <h4>Quem fez dois gols no final?</h4>
@@ -147,11 +166,74 @@
 </body>     
 </html> 
 
-<script>  
+<script>   
+
+                    
+// <select id="i_select">
+//             <option value="">Quantos jogos você assistiu em 2012</option>
+//             <option value="1">Todos</option>
+//             <option value="2">Apenas os dois últimos</option>
+//             <option value="3">Apenas as semifinais</option>
+//             <option value="4">Apenas a final</option>
+        
+            
+//         </select>
+          
+//         <select id="i_final"> Onde foi decido o jogo da final?
+              
+//             <option value="">Onde foi decido a final da libertadores?</option>
+//             <option value="1">Pacaembu?</option>
+//             <option value="2">Neo Quimica Arena</option>
+//             <option value="3">La bombonera</option>
+
+//         </select>
+        
 
 
+function registro(){
+  
+    var quantidade = (i_select.value)
+    var final = (i_final.value)
+        
 
+    if (quantidade == 4 && final == 1) {
+      
+        alert (`O torcedor turista só aparece em epóca de decisão`)
 
+    }  
+      
+    if (quantidade == 3 && final == 3 ) {
+      
+        alert (`O torcedor casca grossa, só esqueceu que a final foi no pacaembu né amigão`)
+
+}
+
+  
+if (quantidade == 2 && final == 2) {
+   
+    alert (`O torcedor ESC. O que esquece de ver os jogos`)
+
+}
+
+if (quantidade == 2 && final == 1) {
+   
+    alert (`Me diz ai como vê a final se não assitiu hein, po coringão :(`)
+
+}
+
+if (quantidade == 2 && final == 3) {
+   
+    
+    alert (`Torcedor inventor, da onde você tirou que a final foi em la bombonera? :(`)
+}   
+
+if (quantidade == 1 && final == 1) {
+   
+    alert(`O torcedor raiz, acompanha em todos momentos do clube!!`)
+
+}    
+
+}
 
 </script>
 

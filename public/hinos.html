@@ -16,23 +16,21 @@
             <div class="logotimao"><img class="logotimao" src="assets/imgs/logo-timao.jpg"></div>
             <h1 class="titulo">SCCP</h1>  
             <ul class="navbar">
-                <li>
-                    <a href="./index.html">
-                        Inicial
-                    </a>
-                </li>
-                <li>
-                    <a href="./historia.html">História</a>
-                </li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
+                
                 <li class="agora">
-                    <a href="./cadastro.html">Cadastro</a>
+                    <a  class="hino_href " href="./cadastro.html">Hinos</a>
+                </li>
+                <li>
+                    <a href="./login.html">Sair</a>
                 </li>
             </ul>
         </div>
-    </div>
+    </div>  
+
+
+    <audio src="Hinos_cor/Aqui tem um bando de loucos - Corinthians [Legendado (ENPT)].mp3"></audio>
+    <audio src="Hinos_cor/Vamos , Vamos Corinthians Esse jogo Teremos Que Ganhar.mp3"></audio>
+    <audio src="Hinos_cor/Poropopó em 2018 - Corinthians - História da Arquibancada.mp3"></audio>
 
     <div class="banner"> 
       
@@ -53,7 +51,7 @@
      <img class="bando_loucos " src="./assets/imgs/hino2.jpg" alt="">  
 
      <div class="btn_ouvir">
-     <button class="btn_hino1" onclick="bando_louco1()">Ouvir</button>      
+     <button class="btn_hino1" onclick="bando_louco2()">Ouvir</button>      
      </div>
 
         </div> 
@@ -63,10 +61,35 @@
          <img class="bando_loucos " src="./assets/imgs/0_AP-DO-NOT-USE-Corinthians-fans.jpg" alt="">  
     
          <div class="btn_ouvir">
-         <button class="btn_hino1" onclick="bando_louco1()">Ouvir</button>      
+         <button class="btn_hino1" onclick="bando_louco3()">Ouvir</button>      
          </div>
     
             </div>
        
     
     </div>
+  
+
+    <script> 
+       
+       function bando_louco1(){
+        
+        var audio = new Audio ('Hinos_cor/Aqui tem um bando de loucos - Corinthians [Legendado (ENPT)].mp3') 
+        audio.play('Hinos_cor/Aqui tem um bando de loucos - Corinthians [Legendado (ENPT)].mp3')
+
+       }  
+
+       function bando_louco2(){
+        
+        var audio = new Audio ('Hinos_cor/Vamos , Vamos Corinthians Esse jogo Teremos Que Ganhar.mp3') 
+        audio.play('Hinos_cor/Vamos , Vamos Corinthians Esse jogo Teremos Que Ganhar.mp3')
+       } 
+
+       function bando_louco3(){
+         
+        var audio = new Audio ('Hinos_cor/Poropopó em 2018 - Corinthians - História da Arquibancada.mp3')
+        audio.play('Hinos_cor/Poropopó em 2018 - Corinthians - História da Arquibancada.mp3')
+
+       }
+    
+    </script>
