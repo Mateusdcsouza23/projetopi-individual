@@ -171,11 +171,11 @@ color:white;
   
   margin-top: 2px;
   margin-left: 40px; 
-  background-color: white;
+  background-color:  gray;
   width: 8vw;
-  height: 8vh;
+  height: 9vh;
   border: 3px solid white;
-  border-radius: 5px;
+  border-radius: 8px;
 font-family: sans-serif; 
 color: black;
 }  
@@ -184,7 +184,7 @@ color: black;
     
   transition: 2s;
   width: 8vw;
-  height: 8vh;
+  height: 9vh;
   background-color: gray; 
   color: gray; 
   border: 3px solid gray;
@@ -294,15 +294,15 @@ margin-left: 85px;
 text-align: center;
 background-color: #212124;
 border-right: 3px white solid;
-height: 86vh;
+height: 100vh;
 width: 22vw;
 text-indent: 5px;  
 }   
 
 .texto_dash{
 
-font-size: 20px;
-margin-top: 30px;
+font-size: 21px;
+margin-top: 8px;
 
 } 
 
@@ -315,6 +315,51 @@ margin-left: 10px;
 margin-top: 20px;
 }
 
+.texto_2{
+  
+  color: white;
+
+}
+
+.div_select1{
+
+  margin-top: 30px;
+
+} 
+
+.div_select2{
+  
+  margin-top: 30px;
+
+}
+
+#i_final{
+ 
+  width: 15vw;
+  border: 4px solid #e5e5e5;;
+  border-radius: 10px;
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 12px;
+
+}
+
+#i_select{
+  width: 15vw;
+  border: 4px solid #e5e5e5;;
+  border-radius: 10px;
+  padding-top: 15px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#div_resultados{
+   
+  color: white;
+  display: block;
+
+}
+
 .btn_voto{
 height: 8vh;
 width: 10vw;
@@ -322,7 +367,6 @@ margin-top: 25px;
 background-color: gray;
 border: 3px solid gray;
 border-radius: 5px;
-
 
 }
 .card_votos{
@@ -552,6 +596,7 @@ display: none;
    
   width: 28vw;
   height: 48vh;
+  border-radius: 8px;
 
 } 
 

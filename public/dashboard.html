@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SCCP - Dashboard</title>
+    <title>SCCP - Quiz</title>
 
 
     <script src="./js/funcoes.js"></script>
@@ -56,7 +56,8 @@
         <div class="titulo_dash"> 
                  
             <h2 class="texto_dash">O quão corinthiano você foi em 2012?</h2> 
-                           
+                            
+         <div class="div_select1"><span class="texto_2">Quantos jogos você assistiu em 2012?</span></div>
         <select id="i_select">
             <option value="">Quantos jogos você assistiu em 2012</option>
             <option value="1">Todos</option>
@@ -66,10 +67,11 @@
         
             
         </select>
-          
-        <select id="i_final"> Onde foi decido o jogo da final?
+
+       <div class="div_select2"><span class="texto_2">Onde foi decidido o jogo da final da libertadores?</span></div>
+        <select id="i_final"> 
               
-            <option value="">Onde foi decido a final da libertadores?</option>
+            <!-- <option value=""></option> -->
             <option value="1">Pacaembu?</option>
             <option value="2">Neo Quimica Arena</option>
             <option value="3">La bombonera</option>
@@ -86,9 +88,9 @@
                <!-- <button  class="btn_voto" onclick="votacao()">Confirmar</button>   -->
 
                <button class="btn_voto" onclick="registro()">Ver resultados</button>
-                
-              <div id="div_resultado" class="texto_aviso"><p>Atenção, considere por na ordem que se encontra os jogos na tela
-              </p></div>
+                 
+               <div id="div_resultados"></div>
+              <!-- <img src="./assets/imgs/torcedor_raiz.png" height="150px" alt=""> -->
               
         </div>
          <div class="card_votos">
@@ -155,82 +157,97 @@
                     <input type="checkbox" class="input_voto">  -->
     
                 </div>
-            
+                        </div>
+
+         </div>
+    </div>
+    
+    <div class="footer">   
+        
+        <div class="container_footer">
+        
+        
+        <div  class="f">
+      <h3 class="texto_footer">Redes Sociais</h3>  
+      
+
+            <p><a class="texto_insta" href="https://www.instagram.com/corinthians/">
+                <span>Instagram:</span>@corinthians</a></p>
+            <p> <a class="texto_insta" href="https://twitter.com/Corinthians?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><span>Twitter:</span>@corinthians</a></p>
+            <p><a class="texto_insta" href="https://www.facebook.com/corinthians/"><span>Facebook:</span>@corinthians</a></p>
+        
+          
+           
+        
+        </div>  
+
+            <img class="logo_footer" src="assets/imgs/logo-timao.jpg" alt="">   
+
+
+            <div class="f2">
+                <h3 class="texto_footer">Seja membro</h3>  
+                
+                <p><a class="texto_insta" href="https://www.youtube.com/c/corinthians">
+                    <span>Youtube:</span> Corinthians TV</a></p>
+                <p class=""> <span>Socio Torcedor</span></p>
             </div>
-
-
-
     
 
+        </div>
+    </div>   
 
 </body>     
 </html> 
 
 <script>   
 
-                    
-// <select id="i_select">
-//             <option value="">Quantos jogos você assistiu em 2012</option>
-//             <option value="1">Todos</option>
-//             <option value="2">Apenas os dois últimos</option>
-//             <option value="3">Apenas as semifinais</option>
-//             <option value="4">Apenas a final</option>
-        
-            
-//         </select>
-          
-//         <select id="i_final"> Onde foi decido o jogo da final?
-              
-//             <option value="">Onde foi decido a final da libertadores?</option>
-//             <option value="1">Pacaembu?</option>
-//             <option value="2">Neo Quimica Arena</option>
-//             <option value="3">La bombonera</option>
-
-//         </select>
-        
-
-
 function registro(){
   
     var quantidade = (i_select.value)
     var final = (i_final.value)
-        
+    var imagem = ""    
 
     if (quantidade == 4 && final == 1) {
       
-        alert (`O torcedor turista só aparece em epóca de decisão`)
+        div_resultados.innerHTML = `O torcedor turista só aparece em epóca de decisão 
+        <img src="./assets/imgs/torcedor_turista5.jpg" height="150px">`
+         
 
     }  
       
     if (quantidade == 3 && final == 3 ) {
       
-        alert (`O torcedor casca grossa, só esqueceu que a final foi no pacaembu né amigão`)
+        div_resultados.innerHTML =  `O torcedor casca grossa, só esqueceu que a final foi no pacaembu né coringão <img src="./assets/imgs/Corinthians10.jpg" height="150px"> `
 
 }
 
   
 if (quantidade == 2 && final == 2) {
    
-    alert (`O torcedor ESC. O que esquece de ver os jogos`)
+    div_resultados.innerHTML = `O torcedor ESC. O que esquece de ver os jogos   
+    <img src="./assets/imgs/tite_esquecido.jpg" height="150px"`
 
 }
 
 if (quantidade == 2 && final == 1) {
    
-    alert (`Me diz ai como vê a final se não assitiu hein, po coringão :(`)
+    div_resultados.innerHTML = `Torcedor arrependido não ter visto a final deve ter sido osso em coringão 
+        <img src="./assets/imgs/images.jpg" height="150px">`
 
 }
 
 if (quantidade == 2 && final == 3) {
    
     
-    alert (`Torcedor inventor, da onde você tirou que a final foi em la bombonera? :(`)
+    div_resultados.innerHTML = ` O torcedor esquecido, como pode errar onde foi o jogo da final da liberta do coringão?
+    <img src="./assets/imgs/rib_8971.png" height="150px">`
 }   
 
 if (quantidade == 1 && final == 1) {
    
-    alert(`O torcedor raiz, acompanha em todos momentos do clube!!`)
-
+    div_resultados.innerHTML = `O torcedor raiz, acompanha em todos momentos do clube!! <br> 
+    <img src="./assets/imgs/torcedor_raiz.png" height="150px" alt="">`
+     
 }    
 
 }
