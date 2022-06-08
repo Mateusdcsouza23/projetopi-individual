@@ -124,7 +124,7 @@ color:white;
 }
 
 .navbar {
-  width: 340px;
+  width: 390px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -200,15 +200,50 @@ color: black;
   text-decoration: none;
 }    
 
-/* Início sessaão 2 pag/home */
+/* Início sessão brasileirão */
 
 .section2{
     
-
   height: 80vh;
   background-size: cover;
+} 
+
+.container_brasileiro{
+  width: 100%;
+  display: flex; 
 }
   
+.card_brasileiro {
+  
+  height: 50vh;
+  width: 50vw;
+  text-align: center;
+  margin-top: 100px;
+  margin-left: 325px;
+   border-radius: 8px; 
+  font-family: sans-serif;
+  background-color: #212124;
+}
+
+.formulario_brasileiro{
+ margin-top: 20px;
+display: flex;
+flex-direction: column;
+color: black;
+font-size: 25px;
+font-family: sans-serif;
+align-items: center;
+border-radius: 8px
+} 
+
+#div_resultado{
+  color:orangered
+}
+
+.tipo_campo2{
+  color: white;
+}
+
 
 /* Início página histótia */ 
 

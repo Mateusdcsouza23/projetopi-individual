@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Blog Timão - Pagina Home</title>
+
+    <script src="./js/funcoes.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+     
+
+</head>
+
+    <body>
+    <div class="header">
+        <div class="container"> 
+            <div class="logotimao"><img class="logotimao" src="assets/imgs/logo-timao.jpg"></div>
+            <h1 class="titulo"> SCCP</h1>
+            <ul class="navbar">
+                <li> <a href="./index.html">Inicial</a></li>
+                <li>
+                    <li class="agora">
+                        Simulador
+                    </li>
+                    <a href="./historia.html">História</a>
+                </li>
+                <li>
+                    <a href="./dashboard.html">Quiz</a>
+                </li>
+                <li>
+                    <a href="./login.html">Login</a>
+                </li>
+                <li>  
+                    <a href="./cadastro.html">Cadastro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="capa">  
+        <div class="container_brasileiro"> 
+            <div class="card_brasileiro"> 
+             <h2>Simule!</h2>           
+                  <div class="formulario_brasileiro">
+
+                    <span class="tipo_campo2">Digite quantos jogos você já assistiu no ano do corinthians?</span>
+                    <input id="i_jogos" type="text" placeholder=""> 
+
+                    <button  class="btn" onclick="ola()">Ver resultados</button>
+        <div>      
+            <div id="div_resultado"></div>
+             
+            <span style="color: black;"></span>
+   
+        </div>
+    </div> 
+
+    
+
+    <script>
+        
+     function ola(){
+       
+        var jogo = Number (i_jogos.value) 
+        var quantidade = jogo*90 
+        var cor = ""
+
+    for(var contador = 0; contador < jogo; contador++) {
+        div_resultado.innerHTML = `Você assistiu <span style="color: white;">${quantidade}</span> minutos em jogos, que da em média de <span style="color: white;">${quantidade/60}</span> horas`
+
+    }
+
+     }
+
+
+    </script>
