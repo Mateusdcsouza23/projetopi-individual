@@ -1,3 +1,4 @@
 # projetopi-indivual
 
-NÃO DEIXE O GITHUB ABERTO NAS MAQUINAS DA FACULDADE, MUITO MENOS COM O SEU USER E EMAIL NO GIT --GLOBAL!!!!!!
+Projeto individual do primeiro semestre da faculdade.
+
